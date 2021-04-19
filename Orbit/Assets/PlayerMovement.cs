@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (spin)
 		{
-			transform.RotateAround(target.transform.position, Vector3.up, -speed * Time.deltaTime);
+			transform.RotateAround(target.transform.position, Vector3.forward, -speed * Time.deltaTime);
 			//transform.Rotate(Vector3.up, speed * Time.deltaTime);
 		}
 	}

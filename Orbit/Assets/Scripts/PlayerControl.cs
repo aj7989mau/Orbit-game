@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraControl : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
 	public float speed;
 	float roll;
@@ -19,6 +19,9 @@ public class CameraControl : MonoBehaviour
 		if (Input.GetKey("space"))
 		{
 			transform.Translate(Vector3.forward * speed * Time.deltaTime);
-		}
+		} else if (Input.GetKey(KeyCode.LeftControl))
+        {
+			transform.Translate(Vector3.forward * -speed * Time.deltaTime);
+        }
 	}
 }
