@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6fd465c16e57894493a80040386ddce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d85ad7db695cd345884509af1dcb933, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -364,22 +364,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 796844140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8252c62ce262d7949bc5142691dc1920, type: 3}
+  m_Script: {fileID: 11500000, guid: f20c20a4cee607047b7b64fa4d003986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 796844142}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.9847328, b: 0, a: 1}
-    key2: {r: 0.03796029, g: 1, b: 0, a: 0}
+    key1: {r: 1, g: 0.912394, b: 0, a: 1}
+    key2: {r: 0.11624193, g: 1, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 20432
-    ctime1: 45296
+    ctime0: 16191
+    ctime1: 39128
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552271971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6cf45d6b196e5644a596b0904c91558, type: 3}
+  m_Script: {fileID: 11500000, guid: 46aa439fb09d5ab4295783f048f95ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 70856646da1b019498b648ebd295e93b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1551683cea1c2d642b828330765e7293, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
