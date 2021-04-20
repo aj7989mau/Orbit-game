@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BombLauncher : MonoBehaviour
+{
+    [SerializeField]
+    private Transform firePointBomb;
+    [SerializeField]
+    private Rigidbody bombPrefab;
+    [SerializeField]
+    private float launchForce = 500f;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire2"))
+        {
+            LaunchProjectileBomb();
+        }
+
+    }
+
+    private void LaunchProjectileBomb()
+    {
+        var projectileBombInstance = Instantiate(
+            bombPrefab,
+            firePointBomb.position,
+            firePointBomb.rotation);
+
+
+        projectileBombInstance.AddForce(firePointBomb.forward * launchForce);
+    }
+}

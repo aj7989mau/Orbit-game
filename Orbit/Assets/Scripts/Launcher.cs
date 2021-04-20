@@ -9,7 +9,7 @@ public class Launcher : MonoBehaviour
     [SerializeField]
     private Rigidbody projectilePrefab;
     [SerializeField]
-    private float launchForce = 700f;
+    private float launchForce = 3000f;
     // Start is called before the first frame update
     void Start()
     {
