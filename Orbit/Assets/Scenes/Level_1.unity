@@ -235,11 +235,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 301098786896247125, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 301098786896247125, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 301098786896247125, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 423439480}
     - target: {fileID: 301098787102833055, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: yawSpeed
-      value: 8
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 301098787102833055, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: orbitSpeed
@@ -392,6 +392,10 @@ PrefabInstance:
     - target: {fileID: 6738216206420292502, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828576682534171632, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
