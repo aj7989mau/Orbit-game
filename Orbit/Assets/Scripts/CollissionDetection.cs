@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollissionDetection : MonoBehaviour
 {
     [SerializeField] private int health;
+    public ParticleSystem fire = null;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -20,6 +21,8 @@ public class CollissionDetection : MonoBehaviour
         else
         {
             Debug.Log(gameObject.name + " is destroyed");
+            
+            Instantiate(fire, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
