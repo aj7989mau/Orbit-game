@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class BombColliderScript : MonoBehaviour
 {
-    public GameObject Explosion;
-    private void OnCollisionEnter(Collision collision)
+    public ParticleSystem fire = null;
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (other.tag == "ColObj")
         {
-            Explode();
+            Instantiate(fire, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
+        
     }
 
-    private void Explode()
-    {
-        GameObject fire = Instantiate(Explosion);
-        fire.GetComponent<ParticleSystem>().Play();
-    }
 }
