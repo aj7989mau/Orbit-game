@@ -7,11 +7,11 @@ public class CollissionDetection : MonoBehaviour
     [SerializeField] private int health;
     public ParticleSystem fire = null;
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.tag == "Player")
+        if (collider.tag.Equals("Player"))
         {
-            Debug.Log(collision.name + " collided with " + this.name + ", apply player damage if needed.");
+            Debug.Log(collider.name + " collided with " + this.name + ", apply player damage if needed.");
         }
         health--;
         if (health > 0)
