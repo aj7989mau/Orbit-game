@@ -23,7 +23,7 @@ public class Launcher : MonoBehaviour
         {
             LaunchProjectile();
         }
-        
+
     }
 
     private void LaunchProjectile()

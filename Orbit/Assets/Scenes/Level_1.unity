@@ -873,6 +873,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.73
       objectReference: {fileID: 0}
+    - target: {fileID: 5250945696779326574, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
+      propertyPath: launchForce
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 6347886753200700486, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -897,6 +901,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9037639945250695938, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
+      propertyPath: launchForce
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
 --- !u!1001 &3023401991200602051
@@ -918,6 +926,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2643009425018877880, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 8973804990643691429, guid: 4874f400d23e88c468a012b879ed3954, type: 3}
     - target: {fileID: 2643009425018877880, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
       propertyPath: health
       value: 1
