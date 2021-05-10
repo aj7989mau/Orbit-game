@@ -801,16 +801,24 @@ PrefabInstance:
       value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 1023458328287933758, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023458328287933758, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.505
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 1189427903620108986, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.53
       objectReference: {fileID: 0}
     - target: {fileID: 1189427903620108986, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189427903620108986, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.505
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5250945696779326574, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: launchForce
@@ -931,12 +939,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7065122612617543679, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 292
+      value: 404
       objectReference: {fileID: 0}
     - target: {fileID: 7065122612617543679, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7442708122074313761, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 8973804990643691429, guid: 4874f400d23e88c468a012b879ed3954, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
 --- !u!1001 &4798611395883642454
