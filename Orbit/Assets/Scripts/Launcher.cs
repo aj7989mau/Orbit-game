@@ -34,6 +34,6 @@ public class Launcher : MonoBehaviour
             firePoint.rotation
             );
 
-        projectileInstance.AddForce(firePoint.forward * launchForce);
+        projectileInstance.AddForce(firePoint.up * launchForce);
     }
 }
