@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5324780221611973232}
   m_Layer: 0
   m_Name: EnemyStructure
-  m_TagString: Untagged
+  m_TagString: ColObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cae02ab8865e5d4d92dae0d3a122aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 0.01
 --- !u!114 &5324780221611973232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +124,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  fire: {fileID: 8973804990643691429, guid: 4874f400d23e88c468a012b879ed3954, type: 3}
