@@ -8,31 +8,45 @@ public class MineSpawner : MonoBehaviour
     [SerializeField] private float minSpawnTime = 10f;
     [SerializeField] private float minCoordinateOffset = 10f;
     [SerializeField] private float maxCoordinateOffset = 20f;
+    [SerializeField] private GameObject mine;
+    [SerializeField] private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-
         Invoke("MineSpawn", 10f);
     }
 
     void MineSpawn()
     {
-        float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
+        
         float randomOffsetX = Random.Range(minCoordinateOffset, maxCoordinateOffset);
         float randomOffsetY = Random.Range(minCoordinateOffset, maxCoordinateOffset);
-        float randomOffsetZ = -(randomOffsetX + randomOffsetY);
+        float randomOffsetZ = Random.Range(minCoordinateOffset, maxCoordinateOffset);
 
         //Uträkning för framtida position om vi inte använder gameObject
 
-        transform.position = new Vector3(transform.position.x + randomOffsetX, transform.position.y + randomOffsetY, transform.position.z + randomOffsetZ);
-        float radiusFactor = 350 / (transform.position.x + transform.position.y + transform.position.z);
+
+        //float radiusFactor = 350 / (transform.position.x + transform.position.y + transform.position.z);
+
+        //transform.position = new Vector3(transform.position.x*radiusFactor, transform.position.y*radiusFactor, transform.position.z*radiusFactor);
+
+        Vector3 futurePlayerPosition = player.transform.right * 350 + player.transform.up * -350;
+
+        Vector3 center = new Vector3(0,0,0);
+
+        Vector3 endPoint = new Vector3(futurePlayerPosition.x + randomOffsetX, futurePlayerPosition.y + randomOffsetY, futurePlayerPosition.z + randomOffsetZ);
+
+        Vector3 direction = (endPoint - center).normalized;
+
+        Vector3 spawnPosition = (350 * direction);
+
+        GameObject.Instantiate(mine, spawnPosition, Quaternion.identity);
 
 
-        transform.position = new Vector3(transform.position.x*radiusFactor, transform.position.y*radiusFactor, transform.position.z*radiusFactor);
 
 
-
+        float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
         Invoke("MineSpawn", randomTime);
     }
 }

@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  fire: {fileID: 0}
+  fire: {fileID: 8973804990643691429, guid: 4874f400d23e88c468a012b879ed3954, type: 3}
 --- !u!1 &8716408116864717967
 GameObject:
   m_ObjectHideFlags: 0
