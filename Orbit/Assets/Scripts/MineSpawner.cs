@@ -6,7 +6,7 @@ public class MineSpawner : MonoBehaviour
 {
     [SerializeField] private float maxSpawnTime = 30f;
     [SerializeField] private float minSpawnTime = 10f;
-    [SerializeField] private float minCoordinateOffset = 10f;
+    [SerializeField] private float minCoordinateOffset = -20f;
     [SerializeField] private float maxCoordinateOffset = 20f;
     [SerializeField] private GameObject mine;
     [SerializeField] private GameObject player;
@@ -19,17 +19,9 @@ public class MineSpawner : MonoBehaviour
 
     void MineSpawn()
     {
-        
         float randomOffsetX = Random.Range(minCoordinateOffset, maxCoordinateOffset);
         float randomOffsetY = Random.Range(minCoordinateOffset, maxCoordinateOffset);
         float randomOffsetZ = Random.Range(minCoordinateOffset, maxCoordinateOffset);
-
-        //Uträkning för framtida position om vi inte använder gameObject
-
-
-        //float radiusFactor = 350 / (transform.position.x + transform.position.y + transform.position.z);
-
-        //transform.position = new Vector3(transform.position.x*radiusFactor, transform.position.y*radiusFactor, transform.position.z*radiusFactor);
 
         Vector3 futurePlayerPosition = player.transform.right * 350 + player.transform.up * -350;
 
@@ -42,8 +34,6 @@ public class MineSpawner : MonoBehaviour
         Vector3 spawnPosition = (350 * direction);
 
         GameObject.Instantiate(mine, spawnPosition, Quaternion.identity);
-
-
 
 
         float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
