@@ -140,4 +140,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941866f9931ac5b44a67387f6cf2e33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 4798611395769008686, guid: e6dbe1588bc12c44e83d437f13482ba7, type: 3}
+  planet: {fileID: 1319428893464601647, guid: e6dbe1588bc12c44e83d437f13482ba7, type: 3}
