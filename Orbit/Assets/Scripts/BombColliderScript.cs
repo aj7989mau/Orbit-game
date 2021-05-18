@@ -9,8 +9,9 @@ public class BombColliderScript : MonoBehaviour
     {
         if (other.tag == "ColObj")
         {
-            Instantiate(fire, transform.position, Quaternion.identity);
+            ParticleSystem newObj = Instantiate(fire, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
+            Destroy(newObj, 15f);
         }
         
     }

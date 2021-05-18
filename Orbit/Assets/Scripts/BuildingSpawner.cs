@@ -28,9 +28,8 @@ public class BuildingSpawner : MonoBehaviour
 
     void BuildingSpawn()
     {
-        GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity);
         int randomSpawn = Random.Range(randomSpawnMin, randomSpawnMax);
-        newObj.transform.SetParent(this.transform.GetChild(randomSpawn).transform);
+        GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, this.transform.GetChild(randomSpawn).transform);
         Debug.Log("Object Spawned" + this.transform.GetChild(randomSpawn).name);
         float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
        
