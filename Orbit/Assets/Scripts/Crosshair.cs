@@ -29,8 +29,9 @@ public class Crosshair : MonoBehaviour
       
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         crosshair = GetComponent<RectTransform>();
-
         currentSize = size;
     }
 
