@@ -14661,6 +14661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 301098787102833048, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 301098787102833054, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -16713,8 +16717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f72da7d41d830446ab838a5a52d3a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnTime: 10
-  minSpawnTime: 1
+  maxSpawnTime: 30
+  minSpawnTime: 30
   minCoordinateOffset: -20
   maxCoordinateOffset: 20
   mine: {fileID: 8716408116864717967, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
@@ -47532,6 +47536,22 @@ PrefabInstance:
     - target: {fileID: 3023401992214544447, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255843647848666250, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3201988}
+    - target: {fileID: 6255843647848666250, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255843647848666250, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
+      propertyPath: movementSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255843647848666250, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
+      propertyPath: activationDistance
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7065122612617543679, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
       propertyPath: m_LocalPosition.x

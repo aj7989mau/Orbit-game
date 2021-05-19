@@ -23,7 +23,7 @@ public class CollissionDetection : MonoBehaviour
             Debug.Log(gameObject.name + " is destroyed");
             
             Instantiate(fire, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }
