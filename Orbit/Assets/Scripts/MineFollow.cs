@@ -10,6 +10,12 @@ public class MineFollow : MonoBehaviour
     [SerializeField] private int activationDistance;
     private float movementSpeed = 0;
     private Rigidbody rigidBody;
+    private AudioSource audioSrc;
+
+    private void Start()
+    {
+        audioSrc = GetComponent<AudioSource>();
+    }
 
     private void Awake()
     {
@@ -21,6 +27,7 @@ public class MineFollow : MonoBehaviour
         
     {      
         if ((player.transform.position - rigidBody.position).magnitude < activationDistance) {
+            audioSrc.Play();
             gameObject.GetComponent<Rigidbody>();
             Vector3 direction = player.transform.position - rigidBody.position;
             direction.Normalize();
