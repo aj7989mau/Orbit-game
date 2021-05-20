@@ -19,18 +19,14 @@ public class MineFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
         
-    {
-        Debug.Log((player.transform.position - rigidBody.position).magnitude);
-        
+    {      
         if ((player.transform.position - rigidBody.position).magnitude < activationDistance) {
             gameObject.GetComponent<Rigidbody>();
             Vector3 direction = player.transform.position - rigidBody.position;
             direction.Normalize();
             movementSpeed = Mathf.Max((movementSpeed + acceleration), maxMovementSpeed);
-            Debug.Log("Why are we here?");
             rigidBody.velocity = direction * movementSpeed;
             
         }
-        
     }
 }

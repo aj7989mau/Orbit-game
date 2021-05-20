@@ -128,21 +128,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 301098787102833048, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
   m_PrefabInstance: {fileID: 951310132}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3201989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3201988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d824f996ec825d4d9f7a19281a195a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  mineDamage: 3
-  missileDamage: 1
 --- !u!54 &3201992
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14809,6 +14794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipModel
       objectReference: {fileID: 0}
+    - target: {fileID: 1993869299755403869, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2659086970253963475, guid: 18daffec9f73e9340bcb780af416c7dd, type: 3}
       propertyPath: m_Name
       value: Ship-x
@@ -16650,6 +16639,7 @@ GameObject:
   - component: {fileID: 1047619828}
   - component: {fileID: 1047619827}
   - component: {fileID: 1047619830}
+  - component: {fileID: 1047619831}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -16717,12 +16707,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f72da7d41d830446ab838a5a52d3a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnTime: 30
-  minSpawnTime: 30
+  maxSpawnTime: 10
+  minSpawnTime: 1
   minCoordinateOffset: -20
   maxCoordinateOffset: 20
   mine: {fileID: 8716408116864717967, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
   player: {fileID: 3201988}
+--- !u!114 &1047619831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047619826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce07eaeb6b7d80949876bf7954938d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1050611478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4682675025650741127, guid: e6dbe1588bc12c44e83d437f13482ba7, type: 3}
