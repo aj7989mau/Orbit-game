@@ -27,7 +27,7 @@ public class CollissionDetection : MonoBehaviour
                 GameState.changeEnemyBuildings(-1);
             }
             Instantiate(fire, transform.position, Quaternion.identity);
-            Destroy(transform.parent.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
