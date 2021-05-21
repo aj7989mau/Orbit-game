@@ -83813,7 +83813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255843647848666250, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
       propertyPath: activationDistance
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7065122612617543679, guid: 7edda45ff22534d48a2be1291c79e50a, type: 3}
       propertyPath: m_LocalPosition.x

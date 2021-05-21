@@ -12,22 +12,22 @@ public class MineFollow : MonoBehaviour
     private Rigidbody rigidBody;
     private AudioSource audioSrc;
 
-    private void Start()
-    {
-        audioSrc = GetComponent<AudioSource>();
-    }
 
     private void Awake()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>(); ;
         player = GameObject.FindGameObjectWithTag("Player");
+        audioSrc = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
         
     {      
         if ((player.transform.position - rigidBody.position).magnitude < activationDistance) {
-            audioSrc.Play();
+            if (!audioSrc.isPlaying)
+            {
+                audioSrc.Play();
+            }
             gameObject.GetComponent<Rigidbody>();
             Vector3 direction = player.transform.position - rigidBody.position;
             direction.Normalize();
