@@ -10,6 +10,7 @@ public class Crosshair : MonoBehaviour
     public float speed;
     private float currentSize;
     private RectTransform crosshair;
+    private AudioSource audioSrc;
 
     bool isMoving
     {
@@ -33,11 +34,13 @@ public class Crosshair : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         crosshair = GetComponent<RectTransform>();
         currentSize = size;
+        audioSrc = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         crosshair.sizeDelta = new Vector2(size, size);
+        
 
         if (isMoving)
         {
@@ -50,5 +53,10 @@ public class Crosshair : MonoBehaviour
         }
 
         crosshair.sizeDelta = new Vector2(currentSize, currentSize);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            audioSrc.Play();
+        }
     }
 }

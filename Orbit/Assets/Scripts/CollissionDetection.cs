@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollissionDetection : MonoBehaviour
 {
+    [SerializeField] private int damageToPlayer = 1;
     [SerializeField] private int health;
     public ParticleSystem fire = null;
 
@@ -11,7 +12,7 @@ public class CollissionDetection : MonoBehaviour
     {
         if (collider.tag.Equals("Player"))
         {
-            Debug.Log(collider.name + " collided with " + this.name + ", apply player damage if needed.");
+            GameState.changeHealth(-damageToPlayer);
         }
         health--;
         if (health > 0)
@@ -21,9 +22,12 @@ public class CollissionDetection : MonoBehaviour
         else
         {
             Debug.Log(gameObject.name + " is destroyed");
-            
+            if (tag.Equals("ColObj"))
+            {
+                GameState.changeEnemyBuildings(-1);
+            }
             Instantiate(fire, transform.position, Quaternion.identity);
-            Destroy(transform.parent.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

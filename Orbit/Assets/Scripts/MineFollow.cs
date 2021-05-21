@@ -10,27 +10,30 @@ public class MineFollow : MonoBehaviour
     [SerializeField] private int activationDistance;
     private float movementSpeed = 0;
     private Rigidbody rigidBody;
+    private AudioSource audioSrc;
+
 
     private void Awake()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>(); ;
         player = GameObject.FindGameObjectWithTag("Player");
+        audioSrc = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
         
-    {
-        Debug.Log((player.transform.position - rigidBody.position).magnitude);
-        
+    {      
         if ((player.transform.position - rigidBody.position).magnitude < activationDistance) {
+            if (!audioSrc.isPlaying)
+            {
+                audioSrc.Play();
+            }
             gameObject.GetComponent<Rigidbody>();
             Vector3 direction = player.transform.position - rigidBody.position;
             direction.Normalize();
             movementSpeed = Mathf.Max((movementSpeed + acceleration), maxMovementSpeed);
-            Debug.Log("Why are we here?");
             rigidBody.velocity = direction * movementSpeed;
             
         }
-        
     }
 }
