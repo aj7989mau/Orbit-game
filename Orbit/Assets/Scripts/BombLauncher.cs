@@ -10,6 +10,8 @@ public class BombLauncher : MonoBehaviour
     private Rigidbody bombPrefab;
     [SerializeField]
     private float launchForce = 500f;
+    private float nextProjectile = 0.0f;
+    private float projectileCoolDown = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +21,10 @@ public class BombLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && Time.time > nextProjectile)
         {
             LaunchProjectileBomb();
+            nextProjectile = Time.time + projectileCoolDown;
         }
 
     }
