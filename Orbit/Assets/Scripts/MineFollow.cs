@@ -20,18 +20,19 @@ public class MineFollow : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
         
     {      
         if ((player.transform.position - rigidBody.position).magnitude < activationDistance) {
             if (!audioSrc.isPlaying)
             {
                 audioSrc.Play();
+                Debug.LogWarning("Reacted)");
             }
             gameObject.GetComponent<Rigidbody>();
             Vector3 direction = player.transform.position - rigidBody.position;
             direction.Normalize();
-            movementSpeed = Mathf.Max((movementSpeed + acceleration), maxMovementSpeed);
+            movementSpeed = Mathf.Max((movementSpeed + acceleration * Time.deltaTime), maxMovementSpeed) ;
             rigidBody.velocity = direction * movementSpeed;
             
         }

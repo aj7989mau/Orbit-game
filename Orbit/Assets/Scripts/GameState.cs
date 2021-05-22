@@ -15,7 +15,7 @@ public class GameState : MonoBehaviour
         {
             gameOver();
         }
-        //Uppdatera GUI här
+        //Uppdatera hälsa i GUI här
     }
 
     public static void changeEnemyBuildings(int change)
@@ -26,7 +26,7 @@ public class GameState : MonoBehaviour
         {
             gameOver();
         }
-        //Uppdatera GUI här
+        //Uppdatera progressbar i GUI här
     }
 
     private static void gameOver()
