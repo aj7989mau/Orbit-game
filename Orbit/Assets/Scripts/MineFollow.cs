@@ -27,7 +27,7 @@ public class MineFollow : MonoBehaviour
             if (!audioSrc.isPlaying)
             {
                 audioSrc.Play();
-                Debug.LogWarning("Reacted)");
+                //Debug.LogWarning("Reacted)");
             }
             gameObject.GetComponent<Rigidbody>();
             Vector3 direction = player.transform.position - rigidBody.position;
