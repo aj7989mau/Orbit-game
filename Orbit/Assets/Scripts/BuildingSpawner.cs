@@ -6,6 +6,7 @@ public class BuildingSpawner : MonoBehaviour
 {
     public GameObject EnemyStructure;
     public GameObject EnemyStructure2;
+    public GameObject EnemyStructure3;
     float minSpawnTime = 10f;
     float maxSpawnTime = 20f;
     int randomContinentMin = 0;
@@ -27,11 +28,19 @@ public class BuildingSpawner : MonoBehaviour
                 if (Random.value <= 0.1)
                 {
                     GameState.changeEnemyBuildings(1);
-                    if (Random.value <= 0.5) { 
+                    if (Random.value <= 0.42) 
+                    { 
                     GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
-                    } else
+                    }
+
+                    else if ((Random.value > 0.42) && (Random.value <= 0.85))
                     {
                         GameObject newObj = Instantiate(EnemyStructure2, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
+                    }
+
+                    else
+                    {
+                        GameObject newObj = Instantiate(EnemyStructure3, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
                     }
                 }
             }
