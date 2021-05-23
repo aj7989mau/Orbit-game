@@ -29,6 +29,8 @@ public class Player_UI : MonoBehaviour
     public void setCurrentBuildings(int enemyBuildings)
     {
         //Visar hur många byggnader som finns
+
+
     }
 
     public void setWinConditionBuildings(int enemyBuildings)
