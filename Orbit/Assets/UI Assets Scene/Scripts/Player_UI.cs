@@ -26,7 +26,12 @@ public class Player_UI : MonoBehaviour
         }
     }
 
-    public void setStartHealth(int startHealth)
+    public void setCurrentBuildings(int enemyBuildings)
+    {
+
+    }
+
+        public void setStartHealth(int startHealth)
     {
         healthbar.SetMaxHealth(startHealth);
     }
@@ -54,5 +59,6 @@ public class Player_UI : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Level_1");
     }
+
 
 }

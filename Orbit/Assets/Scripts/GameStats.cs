@@ -9,7 +9,6 @@ public class GameStats : MonoBehaviour
     public Player_UI player_UI;
     private bool gameStarted = false;
     public int winCondition = 198;
-    public int loseCondition = 202;
 
     public void Start()
     {
@@ -23,19 +22,20 @@ public class GameStats : MonoBehaviour
         {
             gameOver();
         }
+        //Update UI
         player_UI.setCurrentHealth(playerHealth);
-        //Uppdatera hälsa i GUI här
     }
 
     public void changeEnemyBuildings(int change)
     {
         enemyBuildings += change;
         Debug.Log("Current buildings: " + enemyBuildings);
-        if (gameStarted && (enemyBuildings < winCondition || enemyBuildings > loseCondition))
+        if (gameStarted && (enemyBuildings < winCondition))
         {
             gameOver();
         }
-        //Uppdatera progressbar i GUI här
+        //Update UI
+        player_UI.setCurrentBuildings(enemyBuildings);
     }
 
     public void gameOver()
