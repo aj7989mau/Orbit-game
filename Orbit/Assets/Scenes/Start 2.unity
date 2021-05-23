@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f611092dc33e99408a6777f3bef8328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
+  lightMoveDelay: 0
   orbitSpeed: -3
   exitSpeed: 0
   orbitCenter: {fileID: 1636012996}
@@ -952,6 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9ef6bd94f82924d839124be62f2dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoadDelay: 4
   orbitSpeed: -3
   exitSpeed: 2
   orbitCenter: {fileID: 1636012996}
@@ -1252,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f611092dc33e99408a6777f3bef8328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 18
+  lightMoveDelay: 18
   orbitSpeed: 0
   exitSpeed: -3
   orbitCenter: {fileID: 1636012996}
