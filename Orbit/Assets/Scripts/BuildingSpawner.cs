@@ -7,6 +7,8 @@ public class BuildingSpawner : MonoBehaviour
     public GameObject EnemyStructure;
     public GameObject EnemyStructure2;
     public GameObject EnemyStructure3;
+    public GameObject gameStatsObject;
+    private GameStats gameStats;
     float minSpawnTime = 10f;
     float maxSpawnTime = 20f;
     int randomContinentMin = 0;
@@ -16,7 +18,7 @@ public class BuildingSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameStats = gameStatsObject.GetComponent<GameStats>();
         randomContinentMax = transform.childCount -1;
         Debug.Log("Continent max: " + randomContinentMax);
         Invoke("BuildingSpawn", 10f);
@@ -27,7 +29,7 @@ public class BuildingSpawner : MonoBehaviour
             {
                 if (Random.value <= 0.1)
                 {
-                    GameStats.changeEnemyBuildings(1);
+                    gameStats.changeEnemyBuildings(1);
                     if (Random.value <= 0.42) 
                     { 
                     GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
@@ -59,7 +61,7 @@ public class BuildingSpawner : MonoBehaviour
 
         GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, transform.GetChild(randomContinent).GetChild(randomLand).transform);
         Debug.Log("Object Spawned on Continent " + transform.GetChild(randomContinent).name + ", Land " + transform.GetChild(randomContinent).GetChild(randomLand).name);
-        GameStats.changeEnemyBuildings(1);
+        gameStats.changeEnemyBuildings(1);
         float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
        
         Invoke("BuildingSpawn", randomTime);

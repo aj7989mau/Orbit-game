@@ -6,8 +6,7 @@ public class GameStats : MonoBehaviour
 {
     [SerializeField] private int playerHealth = 5;
     private static int enemyBuildings = 0;
-
-    Player_UI player_UI;
+    public Player_UI player_UI;
 
     public void changeHealth(int change)
     {
