@@ -11,6 +11,10 @@ public class GameStats : MonoBehaviour
     public int winCondition = 198;
     public int loseCondition = 202;
 
+    public void Start()
+    {
+        player_UI.setStartHealth(playerHealth);
+    }
     public void changeHealth(int change)
     {
         playerHealth += change;
@@ -19,6 +23,7 @@ public class GameStats : MonoBehaviour
         {
             gameOver();
         }
+        player_UI.setCurrentHealth(playerHealth);
         //Uppdatera hälsa i GUI här
     }
 

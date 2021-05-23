@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 public class Player_UI : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    public int currentHealth;
 
     public HealthBarScript healthbar;
 
@@ -17,34 +15,19 @@ public class Player_UI : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
-        healthbar.SetMaxHealth(maxHealth);
+
         winUI.SetActive(false);
         deadUI.SetActive(false);
     }
 
-    void Update()
+    public void setStartHealth(int startHealth)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-
-        if (currentHealth <= 0)
-        {
-            Dead();
-        }
-
-        if (Input.GetKeyDown(KeyCode.P)) //Place holder to see if the win scene works
-        {
-            Win();
-        }
+        healthbar.SetMaxHealth(startHealth);
     }
 
-    void TakeDamage(int damage)
+    public void setCurrentHealth(int health)
     {
-        currentHealth -= damage;
-        healthbar.SetHealth(currentHealth);
+        healthbar.SetHealth(health);
     }
 
     public void Dead()
