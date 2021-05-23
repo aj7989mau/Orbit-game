@@ -20,6 +20,11 @@ public class Player_UI : MonoBehaviour
         deadUI.SetActive(false);
     }
 
+    public void setCurrentBuildings(int enemyBuildings)
+    {
+
+    }
+
     public void setStartHealth(int startHealth)
     {
         healthbar.SetMaxHealth(startHealth);
