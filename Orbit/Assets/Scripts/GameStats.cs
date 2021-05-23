@@ -7,6 +7,9 @@ public class GameStats : MonoBehaviour
     [SerializeField] private int playerHealth = 5;
     private static int enemyBuildings = 0;
     public Player_UI player_UI;
+    private bool gameStarted = false;
+    public int winCondition = 198;
+    public int loseCondition = 202;
 
     public void changeHealth(int change)
     {
@@ -23,7 +26,7 @@ public class GameStats : MonoBehaviour
     {
         enemyBuildings += change;
         Debug.Log("Current buildings: " + enemyBuildings);
-        if (enemyBuildings < 30 || enemyBuildings > 300)
+        if (gameStarted && (enemyBuildings < winCondition || enemyBuildings > loseCondition))
         {
             gameOver();
         }
@@ -32,7 +35,7 @@ public class GameStats : MonoBehaviour
 
     public void gameOver()
     {
-        if (enemyBuildings < 30)
+        if (enemyBuildings < winCondition)
         {
             //Victory screen
             player_UI.Win();
@@ -41,5 +44,10 @@ public class GameStats : MonoBehaviour
             player_UI.Dead();
             //Defeat screen
         }
+    }
+
+    public void startGame()
+    {
+        gameStarted = true;
     }
 }

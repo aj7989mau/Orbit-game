@@ -19,16 +19,13 @@ public class CollissionDetection : MonoBehaviour
         {
             gameStats.changeHealth(-damageToPlayer);
         }
-        Debug.LogWarning("Test");
         health--;
         if (health > 0)
         {
-            Debug.LogWarning("Test3");
             Debug.Log(gameObject.name + " is hit! Needs " + health + " more hits to be destroyed");
         }
         else
         {
-            Debug.LogWarning("Test2");
             Debug.Log(gameObject.name + " is destroyed");
             if (tag.Equals("ColObj"))
             {

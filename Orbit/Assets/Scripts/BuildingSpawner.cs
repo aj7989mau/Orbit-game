@@ -21,34 +21,52 @@ public class BuildingSpawner : MonoBehaviour
         gameStats = gameStatsObject.GetComponent<GameStats>();
         randomContinentMax = transform.childCount -1;
         Debug.Log("Continent max: " + randomContinentMax);
+
+        initializeBuildings();
         Invoke("BuildingSpawn", 10f);
 
-        for (int i = 0; i < transform.childCount; i++)
+
+        gameStats.startGame();
+
+    }
+
+    void initializeBuildings()
+    {
+        int spawnedBuildings = 0;
+        while (spawnedBuildings < 200)
         {
-            for (int j = 0; j < transform.GetChild(i).childCount; j++)
+            for (int i = 0; i < transform.childCount; i++)
             {
-                if (Random.value <= 0.1)
+                for (int j = 0; j < transform.GetChild(i).childCount; j++)
                 {
-                    gameStats.changeEnemyBuildings(1);
-                    if (Random.value <= 0.42) 
-                    { 
-                    GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
-                    }
-
-                    else if ((Random.value > 0.42) && (Random.value <= 0.85))
+                    if (spawnedBuildings == 200)
                     {
-                        GameObject newObj = Instantiate(EnemyStructure2, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
+                        return;
                     }
-
-                    else
+                    if (Random.value <= 0.1)
                     {
-                        GameObject newObj = Instantiate(EnemyStructure3, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
+                        gameStats.changeEnemyBuildings(1);
+                        if (Random.value <= 0.42)
+                        {
+                            GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
+                        }
+
+                        else if ((Random.value > 0.42) && (Random.value <= 0.85))
+                        {
+                            GameObject newObj = Instantiate(EnemyStructure2, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
+                        }
+
+                        else
+                        {
+                            GameObject newObj = Instantiate(EnemyStructure3, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
+                        }
+                        spawnedBuildings++;
+
                     }
                 }
             }
-
         }
-
+        
     }
 
     void BuildingSpawn()
