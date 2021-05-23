@@ -13,6 +13,7 @@ public class GameStats : MonoBehaviour
     public void Start()
     {
         player_UI.setStartHealth(playerHealth);
+        player_UI.setWinConditionBuildings(winCondition);
     }
     public void changeHealth(int change)
     {
