@@ -11,7 +11,7 @@ public class BombLauncher : MonoBehaviour
     [SerializeField]
     private float launchForce = 500f;
     private float nextProjectile = 0.0f;
-    private float projectileCoolDown = 1.0f;
+    private float projectileCoolDown = 0.7f;
     // Start is called before the first frame update
     void Start()
     {
