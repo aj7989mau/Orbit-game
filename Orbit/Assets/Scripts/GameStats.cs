@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameStats : MonoBehaviour
 {
     [SerializeField] private int playerHealth = 5;
-    private static int enemyBuildings = 0;
+    private int enemyBuildings = 0;
     public Player_UI player_UI;
     private bool gameStarted = false;
     public int winCondition = 198;
