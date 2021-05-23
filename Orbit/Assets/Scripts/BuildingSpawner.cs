@@ -27,7 +27,7 @@ public class BuildingSpawner : MonoBehaviour
             {
                 if (Random.value <= 0.1)
                 {
-                    GameState.changeEnemyBuildings(1);
+                    GameStats.changeEnemyBuildings(1);
                     if (Random.value <= 0.42) 
                     { 
                     GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, transform.GetChild(i).GetChild(j).transform);
@@ -59,7 +59,7 @@ public class BuildingSpawner : MonoBehaviour
 
         GameObject newObj = Instantiate(EnemyStructure, transform.position, Quaternion.identity, transform.GetChild(randomContinent).GetChild(randomLand).transform);
         Debug.Log("Object Spawned on Continent " + transform.GetChild(randomContinent).name + ", Land " + transform.GetChild(randomContinent).GetChild(randomLand).name);
-        GameState.changeEnemyBuildings(1);
+        GameStats.changeEnemyBuildings(1);
         float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
        
         Invoke("BuildingSpawn", randomTime);

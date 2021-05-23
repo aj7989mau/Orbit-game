@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : MonoBehaviour
+public class GameStats : MonoBehaviour
 {
     [SerializeField] private static int playerHealth = 5;
     private static int enemyBuildings = 0;

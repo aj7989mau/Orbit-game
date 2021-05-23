@@ -12,7 +12,7 @@ public class CollissionDetection : MonoBehaviour
     {
         if (collider.tag.Equals("Player"))
         {
-            GameState.changeHealth(-damageToPlayer);
+            GameStats.changeHealth(-damageToPlayer);
         }
         health--;
         if (health > 0)
@@ -24,7 +24,7 @@ public class CollissionDetection : MonoBehaviour
             Debug.Log(gameObject.name + " is destroyed");
             if (tag.Equals("ColObj"))
             {
-                GameState.changeEnemyBuildings(-1);
+                GameStats.changeEnemyBuildings(-1);
             }
             Instantiate(fire, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
