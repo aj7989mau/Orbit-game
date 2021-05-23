@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameStats : MonoBehaviour
 {
-    [SerializeField] private static int playerHealth = 5;
+    [SerializeField] private int playerHealth = 5;
     private static int enemyBuildings = 0;
 
-    static public void changeHealth(int change)
+    Player_UI player_UI;
+
+    public void changeHealth(int change)
     {
         playerHealth += change;
         Debug.Log("Player health: " + playerHealth);
@@ -18,7 +20,7 @@ public class GameStats : MonoBehaviour
         //Uppdatera hälsa i GUI här
     }
 
-    public static void changeEnemyBuildings(int change)
+    public void changeEnemyBuildings(int change)
     {
         enemyBuildings += change;
         Debug.Log("Current buildings: " + enemyBuildings);
@@ -29,13 +31,15 @@ public class GameStats : MonoBehaviour
         //Uppdatera progressbar i GUI här
     }
 
-    private static void gameOver()
+    public void gameOver()
     {
         if (enemyBuildings < 30)
         {
             //Victory screen
+            player_UI.Win();
         } else
         {
+            player_UI.Dead();
             //Defeat screen
         }
     }
