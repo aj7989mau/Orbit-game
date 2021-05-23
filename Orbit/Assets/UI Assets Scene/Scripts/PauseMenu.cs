@@ -10,8 +10,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject InstructionsMenuUI;
 
-    Player_UI player_UI;
-
     int k = 0;
 
     // Update is called once per frame
@@ -65,13 +63,6 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (GameIsPaused)
-            {
-                player_UI.Restart();
-            }
-        }
     }
 
     public void Resume()

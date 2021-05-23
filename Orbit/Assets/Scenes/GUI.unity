@@ -615,6 +615,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1728140286}
+    - target: {fileID: 6053743801460675176, guid: 0407c12c4ea7c91419484dfd35f594df, type: 3}
+      propertyPath: player_UI
+      value: 
+      objectReference: {fileID: 1728140286}
     - target: {fileID: 6053743801460675182, guid: 0407c12c4ea7c91419484dfd35f594df, type: 3}
       propertyPath: m_Name
       value: Canvas_UI

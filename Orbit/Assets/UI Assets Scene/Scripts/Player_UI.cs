@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Player_UI : MonoBehaviour
 {
-
-
     public HealthBarScript healthbar;
 
     public GameObject deadUI;
@@ -18,6 +16,14 @@ public class Player_UI : MonoBehaviour
 
         winUI.SetActive(false);
         deadUI.SetActive(false);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+        }
     }
 
     public void setStartHealth(int startHealth)
