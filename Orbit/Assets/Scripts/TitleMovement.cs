@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TitleMovement : MonoBehaviour
 {
+    public float levelLoadDelay;
     public float orbitSpeed;
     public float exitSpeed;
     public GameObject orbitCenter;
@@ -15,6 +17,12 @@ public class TitleMovement : MonoBehaviour
         if (Input.GetKeyDown("space"))  
         {
             orbitSpeed = exitSpeed;
+            StartCoroutine(LoadLevel());
         }
+    }
+    private IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(levelLoadDelay);
+        SceneManager.LoadScene("Level_1");
     }
 }
