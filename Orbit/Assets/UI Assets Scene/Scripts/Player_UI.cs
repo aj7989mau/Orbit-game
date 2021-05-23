@@ -10,6 +10,7 @@ public class Player_UI : MonoBehaviour
 
     public GameObject deadUI;
     public GameObject winUI;
+    public Text enemyStructuresLeft;
 
     void Start()
     {
@@ -28,14 +29,7 @@ public class Player_UI : MonoBehaviour
 
     public void setCurrentBuildings(int enemyBuildings)
     {
-        //Visar hur många byggnader som finns
-
-
-    }
-
-    public void setWinConditionBuildings(int enemyBuildings)
-    {
-
+        enemyStructuresLeft.text = enemyBuildings.ToString();
     }
 
     public void setStartHealth(int startHealth)
