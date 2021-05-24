@@ -23,7 +23,7 @@ public class MineSpawner : MonoBehaviour
         float randomOffsetY = Random.Range(minCoordinateOffset, maxCoordinateOffset);
         float randomOffsetZ = Random.Range(minCoordinateOffset, maxCoordinateOffset);
 
-        Vector3 futurePlayerPosition = player.transform.right * 350 + player.transform.up * -350;
+        Vector3 futurePlayerPosition = player.transform.right * 250 + player.transform.up * -115;
 
         Vector3 center = new Vector3(0,0,0);
 
